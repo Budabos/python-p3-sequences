@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
-
 def print_fibonacci(length):
-    pass
+    sequence = [0] if length >= 1 else []
+
+    while len(sequence) < length:
+        sequence.append(sequence[-1] + sequence[-2] if len(sequence) > 1 else 1)
+
+    print(sequence)
